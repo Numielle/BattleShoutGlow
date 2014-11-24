@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: BattleShoutGlow
+## Notes: Adds glowing to battle shout in bars.
+## Author: Numielle @ Feenix
+## Version: 1.0.0
+## Dependencies: ActionButtonUtils
+
+BattleShoutGlow.lua
