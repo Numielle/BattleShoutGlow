@@ -47,6 +47,11 @@ BSA_Frame:SetScript("OnEvent", function()
 				BSA_HaveBS = true;
 			end
 		end
+	elseif event == "PLAYER_DEAD" then
+		BSA_InCombat = false;
+		BSA_HaveBS = false;
+
+		ABI_Trigger(BSA_Texture, BSA_Remove);
 	end
 end);
 BSA_Frame:RegisterEvent("PLAYER_REGEN_ENABLED");
@@ -54,5 +59,6 @@ BSA_Frame:RegisterEvent("PLAYER_REGEN_DISABLED");
 BSA_Frame:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF");
 BSA_Frame:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS");
 BSA_Frame:RegisterEvent("PLAYER_LOGIN");
+BSA_Frame:RegisterEvent("PLAYER_DEAD");
 
 end
